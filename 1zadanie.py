@@ -1,8 +1,8 @@
-name = input('Введитае Ваше имя: ')
-age = int(input(f'Здравствуйте {name} введите ваш возрост в этом году: '))
-year_now = 2021
-year_birth = year_now - age
-print(f'{name} ваш год рождение {year_birth}')
-year_age = int(input(f'{name} введите год чтобы узнать сколько Вам будет лет в этом году: '))
-age_input_user = year_age - year_birth
-print(f'{name} в {year_age} Вам будет {age_input_user} лет')
+
+var_list = [False, 1, 1.2,'stroka',[1,2,3],('1',2,'3.1'),{1,2,3},{1:'1',2:'2',3:'3'}]
+i = 0
+print(var_list)
+len_list = len(var_list)
+while(len_list > i):
+    print('Значение: ',var_list[i],' тип данных:',type(var_list[i]))
+    i+=1

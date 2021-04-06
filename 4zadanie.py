@@ -1,11 +1,6 @@
-user_num = int(input('Введите целое число: '))
-num_max = 0
-count = 0
-while user_num > 0 :
-    num = user_num % 10
-    if num_max < num:
-        num_max = num
-    user_num = user_num // 10
-    count += 1
+user_string = input('Введите строку раздленную пробелами: ')
 
-print(f'Наибольшое число {num_max}, всего было чисел {count}')
+my_list = user_string.split(' ')
+
+for ind, el in enumerate(my_list):
+    print(ind, el[:10])

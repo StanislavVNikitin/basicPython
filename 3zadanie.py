@@ -1,5 +1,8 @@
-var_user = input('Введите целое число: ')
-var_user2 = var_user * 2
-var_user3 = var_user * 3
-summa = int(var_user) + int(var_user2) + int(var_user3)
-print(f'Сумма введенного числа {var_user} + {var_user2} + {var_user3} = {summa}')
+list_seasons = ['зима', 'зима', 'весна', 'весна', 'весна', 'лето', 'лето', 'лето', 'осень', 'осень', 'осень', 'зима']
+dict_seasons = {1: 'зима', 2: 'зима', 3: 'весна', 4: 'весна', 5: 'весна', 6: 'лето', 7: 'лето', 8: 'лето', 9: 'осень',
+                10: 'осень', 11: 'осень', 12: 'зима'}
+
+num_month = int(input('Введите месяц года в виде целого числа от 1 до 12: '))
+
+print('Времена года из списка:', list_seasons[num_month - 1])
+print('Времена года из словаря:', dict_seasons.get(num_month))

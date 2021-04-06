@@ -1,20 +1,19 @@
-input_user_secunds = int(input('Введите время в секундах: '))
-sec = int(input_user_secunds % 60)
-h = int(input_user_secunds // 3600)
-if h > 0:
-    min = int((input_user_secunds % 3600) // 60)
+var_list = []
+i = 1
+modif_list = []
+
+while (int(input("Меню: Хотите добавить элемент в список(1 - да; 0 - нет):")) or not (len(var_list))):
+    var_list.append(input("Введите значение для добавления в список: "))
+
+print(f'Вы ввели список', var_list)
+
+if (len(var_list) >= 2):
+    while (i < (len(var_list) // 2 * 2)):
+        modif_list.append(var_list[i])
+        modif_list.append(var_list[i - 1])
+        i += 2
+    if (len(var_list) % 2):
+        modif_list.append(var_list[-1])
+    print(f'Измененный список', modif_list)
 else:
-    min = int(input_user_secunds // 60)
-if sec < 10:
-    sec = '0' + str(sec)
-else:
-    sec = str(sec)
-if min < 10:
-    min = '0' + str(min)
-else:
-    min = str(min)
-if h < 10:
-    h = '0' + str(h)
-else:
-    h = str(h)
-print(f'Время в формате hh:mm:ss {h}:{min}:{sec}')
+    print("размер списка меньше двух элементов:", var_list)
