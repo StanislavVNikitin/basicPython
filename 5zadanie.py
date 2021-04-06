@@ -1,12 +1,17 @@
-gain = int(input('Введите значение выручки'))
-costs = int(input('Введите значение издержек'))
-profit = gain - costs
-if profit > 0:
-    profitable = (profit / gain)
-    print('Вы в прибыли')
-    print(f'Отношение прибыли к выручки {profitable}')
-    ammount_staff = int(input('Введите количество персонала в фирме: '))
-    profit_ammount_staff = profit / ammount_staff
-    print(f'Ваша приболь на одного сотрудника состваляет: {profit_ammount_staff}')
-else:
-    print('Вы в убытке')
+my_list = [7, 5, 3, 3, 2]
+while True:
+    user_rating = int(input('Введите новый рейтинг: '))
+    len_list = len(my_list)
+    i = 0
+    while (i < len_list):
+        if (my_list[i] < user_rating):
+            if (i == 0):
+                my_list.insert(0, user_rating)
+                break
+            else:
+                my_list.insert(i, user_rating)
+                break
+        i += 1
+    else:
+        my_list.append(user_rating)
+    print(my_list)
